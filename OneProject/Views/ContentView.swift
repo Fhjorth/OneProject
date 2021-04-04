@@ -11,7 +11,13 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Button("Button") { }
+            Text("App Name")
+                .font(.title)
+                .padding(100)
+            Spacer()
+            Button("Login") { }
+                .buttonStyle(CustomButtton())
+            Button("Sign Up") {}
                 .buttonStyle(CustomButtton())
         }
     }
