@@ -14,9 +14,8 @@ struct ContentView: View {
         Text("hej, world!")
             .padding()
         
-        Text("Score: \(settings.HTTP_STATUS_OK)")
-
-                .background(Color.blue)
+       Text("Score: \(settings.HTTP_STATUS_OK)")
+            .background(Color.blue)
 
     }
 }

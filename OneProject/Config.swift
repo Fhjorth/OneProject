@@ -1,5 +1,5 @@
 //
-//  Config.swift
+//  config.swift
 //  OneProject
 //
 //  Created by Mathias Hansen on 04/04/2021.
