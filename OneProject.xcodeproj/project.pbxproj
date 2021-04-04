@@ -20,6 +20,8 @@
 		2FA4FC84261922FA00F343B9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC83261922FA00F343B9 /* Color.swift */; };
 		2FA4FC872619ECC500F343B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC862619ECC500F343B9 /* User.swift */; };
 		2FD7E455261A65BF00EAC778 /* CustomButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E454261A65BF00EAC778 /* CustomButtton.swift */; };
+		2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E458261A6C4600EAC778 /* LoginView.swift */; };
+		2FD7E45C261A71FC00EAC778 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E45B261A71FC00EAC778 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		2FA4FC83261922FA00F343B9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FA4FC862619ECC500F343B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2FD7E454261A65BF00EAC778 /* CustomButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtton.swift; sourceTree = "<group>"; };
+		2FD7E458261A6C4600EAC778 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2FD7E45B261A71FC00EAC778 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				2FD7E453261A65AA00EAC778 /* CustomViews */,
 				2FA4FC5D26191A7E00F343B9 /* ContentView.swift */,
+				2FD7E458261A6C4600EAC778 /* LoginView.swift */,
+				2FD7E45B261A71FC00EAC778 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,8 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */,
 				2FA4FC872619ECC500F343B9 /* User.swift in Sources */,
 				2FA4FC5E26191A7E00F343B9 /* ContentView.swift in Sources */,
+				2FD7E45C261A71FC00EAC778 /* SignUpView.swift in Sources */,
 				2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */,
 				2FA4FC84261922FA00F343B9 /* Color.swift in Sources */,
 				2FD7E455261A65BF00EAC778 /* CustomButtton.swift in Sources */,

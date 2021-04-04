@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    @State var selection: Int? = nil
+    
     var body: some View {
-        VStack {
-            Text("App Name")
-                .font(.title)
-                .padding(100)
-            Spacer()
-            Button("Login") { }
-                .buttonStyle(CustomButtton())
-            Button("Sign Up") {}
-                .buttonStyle(CustomButtton())
+        NavigationView {
+            VStack {
+                Text("App Name")
+                    .font(.title)
+                    .padding(100)
+                Spacer()
+                NavigationLink(
+                    destination: LoginView(),
+                    tag: 1,
+                    selection: $selection){
+                Button("Login") { self.selection = 1 }
+                    .buttonStyle(CustomButtton())
+                }
+                NavigationLink(
+                    destination: SignUpView(),
+                    tag: 2,
+                    selection: $selection){
+                Button("Sign Up") { self.selection = 2 }
+                    .buttonStyle(CustomButtton())
+                }
+            }
         }
     }
 }
