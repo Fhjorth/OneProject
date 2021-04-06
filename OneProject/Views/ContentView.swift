@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selection: Int? = nil
+    @EnvironmentObject var session: SessionStore
     
     var body: some View {
         NavigationView {
@@ -38,6 +39,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(SessionStore())
     }
 }
