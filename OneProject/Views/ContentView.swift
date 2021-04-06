@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("App Name")
+                Text("Click & Enjoy")
                     .font(.title)
                     .padding(100)
                 Spacer()
