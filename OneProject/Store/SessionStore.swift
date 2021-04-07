@@ -23,6 +23,10 @@ class SessionStore: ObservableObject {
         Auth.auth().signIn(withEmail: email, password: password, completion: handler)
     }
     
+    func signUp(email: String, password: String, handler: @escaping AuthDataResultCallback) {
+        Auth.auth().createUser(withEmail: email, password: password, completion: handler)
+    }
+    
     func unbind () {
         if let handle = handle {
             Auth.auth().removeStateDidChangeListener(handle)

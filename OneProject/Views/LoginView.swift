@@ -43,20 +43,6 @@ struct LoginView: View {
                 isShowing = true
         }
     }
-    
-    //        session.signIn(email: email, password: password) { (result, error) in
-    //            loading = false
-    //            if error != nil {
-    //                self.error = true
-    //                self.global.updateLoadingState(isLoading: false)
-    //                print("hej")
-    //            } else {
-    //                self.email = ""
-    //                self.password = ""
-    //                isShowing = true
-    //                print("func logIn is called")
-    //            }
-    //        }
 }
 
 var body: some View {
