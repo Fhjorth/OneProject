@@ -12,18 +12,17 @@ struct SignUpView: View {
     
     @State var email: String = ""
     @State var password: String = ""
-    @State var error: Bool = false
+    @State var error = ""
     @ObservedObject var global = ControllerRegistry.global
     @EnvironmentObject var session: SessionStore
     @State var isShowing: Bool = false
     
     func signUp() {
         self.global.updateLoadingState(isLoading: true)
-        error = false
         
         session.signUp(email: email, password: password) { (result, error ) in
-            if error != nil {
-                self.error = true
+            if let error = error {
+                self.error = error.localizedDescription
                 self.global.updateLoadingState(isLoading: false)
                 print("here 1")
             } else {
@@ -39,12 +38,22 @@ struct SignUpView: View {
     
     var body: some View {
         VStack {
-            TextField("Email", text: $email)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(10)
-            SecureField("Password", text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(10)
+            Text("Create Account")
+                .font(.system(size: 32, weight: .heavy))
+            
+            Text("Sign up to get started")
+                .font(.system(size: 18, weight: .medium))
+                .foregroundColor(Color("Inactive"))
+            
+            VStack(spacing: 18) {
+                TextField("Email", text: $email)
+                    .padding(12)
+                    .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black)))
+                SecureField("Password", text: $password)
+                    .padding(12)
+                    .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black)))
+            }
+            .padding(.vertical, 64)
             
             NavigationLink(
                 destination: MainView(),
@@ -57,12 +66,13 @@ struct SignUpView: View {
             }
             .buttonStyle(CustomButtton())
         }
+        .padding(.horizontal, 32)
         .navigationBarTitle("Sign Up", displayMode: .inline)
     }
 }
 
-//struct SignUpView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SignUpView()
-//    }
-//}
+struct SignUpView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignUpView()
+    }
+}
