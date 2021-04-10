@@ -26,6 +26,9 @@
 		2FD7E46B261B7A2F00EAC778 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E46A261B7A2F00EAC778 /* MainView.swift */; };
 		2FD7E46E261B7E4F00EAC778 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E46D261B7E4F00EAC778 /* Global.swift */; };
 		2FD7E471261B7EBE00EAC778 /* ControllerRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E470261B7EBE00EAC778 /* ControllerRegistry.swift */; };
+		C4A402A8261DED8B00BAD14F /* CultureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A402A7261DED8A00BAD14F /* CultureEvent.swift */; };
+		C4A402AB261DF0B600BAD14F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A402AA261DF0B600BAD14F /* Menu.swift */; };
+		C4A402AE261F423000BAD14F /* MenuCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A402AD261F422F00BAD14F /* MenuCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		2FD7E46A261B7A2F00EAC778 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2FD7E46D261B7E4F00EAC778 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2FD7E470261B7EBE00EAC778 /* ControllerRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerRegistry.swift; sourceTree = "<group>"; };
+		C4A402A7261DED8A00BAD14F /* CultureEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureEvent.swift; sourceTree = "<group>"; };
+		C4A402AA261DF0B600BAD14F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		C4A402AD261F422F00BAD14F /* MenuCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 				2FD7E458261A6C4600EAC778 /* LoginView.swift */,
 				2FD7E45B261A71FC00EAC778 /* SignUpView.swift */,
 				2FD7E46A261B7A2F00EAC778 /* MainView.swift */,
+				C4A402AD261F422F00BAD14F /* MenuCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				2FA4FC862619ECC500F343B9 /* User.swift */,
+				C4A402A7261DED8A00BAD14F /* CultureEvent.swift */,
+				C4A402AA261DF0B600BAD14F /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,11 +241,14 @@
 				2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */,
 				2FD7E46B261B7A2F00EAC778 /* MainView.swift in Sources */,
 				2FA4FC872619ECC500F343B9 /* User.swift in Sources */,
+				C4A402A8261DED8B00BAD14F /* CultureEvent.swift in Sources */,
 				2FA4FC5E26191A7E00F343B9 /* ContentView.swift in Sources */,
 				2FD7E45C261A71FC00EAC778 /* SignUpView.swift in Sources */,
 				2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */,
+				C4A402AE261F423000BAD14F /* MenuCardView.swift in Sources */,
 				2FA4FC84261922FA00F343B9 /* Color.swift in Sources */,
 				2FD7E463261B67CA00EAC778 /* SessionStore.swift in Sources */,
+				C4A402AB261DF0B600BAD14F /* Menu.swift in Sources */,
 				2FD7E46E261B7E4F00EAC778 /* Global.swift in Sources */,
 				2FD7E455261A65BF00EAC778 /* CustomButtton.swift in Sources */,
 				2FD7E471261B7EBE00EAC778 /* ControllerRegistry.swift in Sources */,
