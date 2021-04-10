@@ -12,11 +12,17 @@ import Combine
 class SessionStore: ObservableObject {
     var didChange = PassthroughSubject<SessionStore, Never>()
     var handle: AuthStateDidChangeListenerHandle?
-    var session: User? {didSet {self.didChange.send(self)}}
+    @Published var session: User? {didSet {self.didChange.send(self)}}
     
     // function to listen if a user is logged in
     func list() {
-        
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if let user = user {
+                self.session = User(uid: user.uid, email: user.email!, displayName: user.displayName!)
+            } else {
+                self.session = nil
+            }
+        })
     }
     
     func signIn(email: String, password: String, handler: @escaping AuthDataResultCallback) {

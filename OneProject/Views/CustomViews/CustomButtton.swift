@@ -15,7 +15,8 @@ struct CustomButtton: ButtonStyle {
             .label
             .foregroundColor(configuration.isPressed ? Color.inactive : Color.white)
             .padding()
-            .frame(width: 300, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(height: 60)
             .background(Color.newPrimary)
             .cornerRadius(8)
     }
