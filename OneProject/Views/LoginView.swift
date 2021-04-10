@@ -41,49 +41,43 @@ struct LoginView: View {
                 self.email = ""
                 self.password = ""
                 isShowing = true
+            }
         }
     }
     
-    //        session.signIn(email: email, password: password) { (result, error) in
-    //            loading = false
-    //            if error != nil {
-    //                self.error = true
-    //                self.global.updateLoadingState(isLoading: false)
-    //                print("hej")
-    //            } else {
-    //                self.email = ""
-    //                self.password = ""
-    //                isShowing = true
-    //                print("func logIn is called")
-    //            }
-    //        }
-}
-
-var body: some View {
-    VStack {
+    var body: some View {
         VStack() {
-            TextField("Email", text: $email)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(10)
-            SecureField("Password", text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(10)
-            NavigationLink(
-                destination: MainView(),
-                isActive: $isShowing) {
-                EmptyView()
+            Text("Welcome Back!")
+                .font(.system(size: 32, weight: .heavy))
+            Text("Sign in to continue")
+                .font(.system(size: 18, weight: .medium))
+                .foregroundColor(Color("Inactive"))
+            
+            VStack(spacing: 18) {
+                TextField("Email", text: $email)
+                    .font(.system(size: 14))
+                    .padding(12)
+                    .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
+                SecureField("Password", text: $password)
+                    .font(.system(size: 14))
+                    .padding(12)
+                    .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
+                NavigationLink(
+                    destination: MainView(),
+                    isActive: $isShowing) {
+                    EmptyView()
+                }
             }
+            .padding(.vertical, 64)
             
             Button("Login") {
                 logIn()
             }
-            .padding(10)
             .buttonStyle(CustomButtton())
-            
         }
+        .padding(.horizontal, 32)
+        .navigationBarTitle("Sign In", displayMode: .inline)
     }
-    .navigationBarTitle("Sign In", displayMode: .inline)
-}
 }
 
 struct LoginView_Previews: PreviewProvider {
