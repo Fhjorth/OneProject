@@ -18,6 +18,7 @@ struct CustomButtton: ButtonStyle {
             .padding()
             .frame(minWidth: 0, maxWidth: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .frame(height: 60)
+            //.background(LinearGradient(gradient: Gradient(colors: [Color.newPrimary, Color.secondary]), startPoint: .trailing, endPoint: .leading))
             .background(Color.newPrimary)
             .cornerRadius(8)
     }
