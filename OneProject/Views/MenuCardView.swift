@@ -11,50 +11,52 @@ struct MenuCardView: View {
     
     @State var selectedTab = Tabs.FirstTab
     var event: Event
-
+    
     var body: some View {
-        VStack {
-            HStack {
+        NavigationView {
+            VStack {
+                HStack {
+                    Spacer()
+                    VStack {
+                        Image(systemName: "airplane")
+                            .foregroundColor(selectedTab == .FirstTab ? Color.red : Color.black)
+                        Text("Beverage")
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .FirstTab
+                    }
+                    Spacer()
+                    VStack {
+                        Image(systemName: "person.fill")
+                            .foregroundColor(selectedTab == .SecondTab ? Color.red : Color.black)
+                        Text("Food")
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .SecondTab
+                    }
+                    Spacer()
+                    VStack {
+                        Image(systemName: "cart.fill")
+                            .foregroundColor(selectedTab == .ThirdTab ? Color.red : Color.black)
+                        Text("Alcohol")
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .ThirdTab
+                    }
+                    Spacer()
+                }
+                .padding(.bottom)
+                .background(Color.green.edgesIgnoringSafeArea(.all))
+                
                 Spacer()
-                VStack {
-                    Image(systemName: "airplane")
-                    .foregroundColor(selectedTab == .FirstTab ? Color.red : Color.black)
-                    Text("Beverage")
+                
+                if selectedTab == .FirstTab {
+                    FirstTabView(event:event)
+                } else if selectedTab == .SecondTab {
+                    SecondTabView(event:event)
+                } else {
+                    ThirdTabView(event:event)
                 }
-                .onTapGesture {
-                    self.selectedTab = .FirstTab
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "person.fill")
-                        .foregroundColor(selectedTab == .SecondTab ? Color.red : Color.black)
-                    Text("Food")
-                }
-                .onTapGesture {
-                    self.selectedTab = .SecondTab
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "cart.fill")
-                        .foregroundColor(selectedTab == .ThirdTab ? Color.red : Color.black)
-                    Text("Alcohol")
-                }
-                .onTapGesture {
-                    self.selectedTab = .ThirdTab
-                }
-                Spacer()
-            }
-            .padding(.bottom)
-            .background(Color.green.edgesIgnoringSafeArea(.all))
-            
-            Spacer()
-            
-            if selectedTab == .FirstTab {
-                FirstTabView(event:event)
-            } else if selectedTab == .SecondTab {
-                SecondTabView(event:event)
-            } else {
-                ThirdTabView(event:event)
             }
         }
     }
@@ -70,38 +72,38 @@ struct FirstTabView : View {
                     HStack {
                         ImageMenu(event: event, i: i)
                         if i+1 < event.drinks.count  {
-                        ImageMenu(event: event, i:i+1)
+                            ImageMenu(event: event, i:i+1)
+                        }
                     }
-                 }
-               }
+                }
             }
-         } .navigationBarBackButtonHidden(true)
-            Spacer()
-        }
+        } .navigationBarBackButtonHidden(true)
+        Spacer()
     }
+}
 
 
 //food
 struct SecondTabView : View {
     var event: Event
-
+    
     var body : some View {
         Text("SECOND TAB VIEW")
         Text("\(event.title)")
         Text("\(event.mad[0])")
         Text("\(event.mad[1])")
-
+        
     }
 }
 
 //Alcohol
 struct ThirdTabView : View {
     var event: Event
-
+    
     var body : some View {
         Text("THIRD TAB VIEW")
         Text("\(event.title)")
-
+        
     }
 }
 
