@@ -18,17 +18,17 @@ struct navbarView: View {
             MainView()
                 .tabItem {
                     Image(systemName: "house.fill")
-                    Text("First Tab")
+                    Text("Event")
                 }
             Text("The content of the second view")
                 .tabItem {
                     Image(systemName: "cart.fill")
-                    Text("second Tab")
+                    Text("Order")
                 }
             Text("The content of the third view")
                 .tabItem {
                     Image(systemName: "person.circle.fill")
-                    Text("third Tab")
+                    Text("Account")
                 }
         }
         .navigationBarBackButtonHidden(true)
