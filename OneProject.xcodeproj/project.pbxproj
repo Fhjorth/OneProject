@@ -18,6 +18,7 @@
 		2FA4FC7926191F8400F343B9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA4FC7826191F8400F343B9 /* FirebaseDatabase */; };
 		2FA4FC84261922FA00F343B9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC83261922FA00F343B9 /* Color.swift */; };
 		2FA4FC872619ECC500F343B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC862619ECC500F343B9 /* User.swift */; };
+		2FBDC0622624C755004F1A91 /* navbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDC0612624C755004F1A91 /* navbarView.swift */; };
 		2FD7E455261A65BF00EAC778 /* CustomButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E454261A65BF00EAC778 /* CustomButtton.swift */; };
 		2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E458261A6C4600EAC778 /* LoginView.swift */; };
 		2FD7E45C261A71FC00EAC778 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E45B261A71FC00EAC778 /* SignUpView.swift */; };
@@ -41,6 +42,7 @@
 		2FA4FC6426191A7F00F343B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA4FC83261922FA00F343B9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FA4FC862619ECC500F343B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2FBDC0612624C755004F1A91 /* navbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navbarView.swift; sourceTree = "<group>"; };
 		2FD7E454261A65BF00EAC778 /* CustomButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtton.swift; sourceTree = "<group>"; };
 		2FD7E458261A6C4600EAC778 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FD7E45B261A71FC00EAC778 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				2FD7E46A261B7A2F00EAC778 /* MainView.swift */,
 				C4A402AD261F422F00BAD14F /* MenuCardView.swift */,
 				C4A402BC2623858700BAD14F /* SizeAndQuantityView.swift */,
+				2FBDC0612624C755004F1A91 /* navbarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBDC0622624C755004F1A91 /* navbarView.swift in Sources */,
 				2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */,
 				2FD7E46B261B7A2F00EAC778 /* MainView.swift in Sources */,
 				C4A402BD2623858700BAD14F /* SizeAndQuantityView.swift in Sources */,

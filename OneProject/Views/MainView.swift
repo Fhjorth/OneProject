@@ -69,9 +69,7 @@ struct MainView: View {
             }
             Spacer()
         }
-        .navigationBarBackButtonHidden(true)
         .padding(.horizontal, 32)
-        .navigationBarTitle("Choose Event", displayMode: .large)
        }
 }
 

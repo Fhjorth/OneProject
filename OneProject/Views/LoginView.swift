@@ -63,7 +63,7 @@ struct LoginView: View {
                     .padding(12)
                     .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
                 NavigationLink(
-                    destination: MainView(),
+                    destination: navbarView(),
                     isActive: $isShowing) {
                     EmptyView()
                 }

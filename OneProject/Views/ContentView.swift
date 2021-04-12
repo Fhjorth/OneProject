@@ -25,6 +25,8 @@ struct ContentView: View {
                 Button("Login") { self.selection = 1 }
                     .buttonStyle(CustomButtton())
                 }
+                .padding(.horizontal, 32)
+                
                 NavigationLink(
                     destination: SignUpView(),
                     tag: 2,
@@ -32,6 +34,7 @@ struct ContentView: View {
                 Button("Sign Up") { self.selection = 2 }
                     .buttonStyle(CustomButtton())
                 }
+                .padding(.horizontal, 32)
             }
         }
     }
