@@ -68,12 +68,11 @@ struct MainView: View {
                 Divider()
             }
             Spacer()
-        }        .navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
         .padding(.horizontal, 32)
-        .navigationBarTitle("Choose Event", displayMode: .inline)
+        .navigationBarTitle("Choose Event", displayMode: .large)
        }
-    
-
 }
 
 
