@@ -73,7 +73,8 @@ struct MainView: View {
                 Divider()
             }
         }        .navigationBarBackButtonHidden(true)
-
+        .padding(.horizontal, 32)
+        .navigationBarTitle("Choose Event", displayMode: .inline)
        }
     
 

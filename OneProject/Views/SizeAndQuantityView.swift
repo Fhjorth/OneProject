@@ -59,8 +59,9 @@ struct SizeAndQuantityView: View {
             }
             .buttonStyle(CustomButtton())
             Spacer()
-
         }
+        .navigationBarTitle("Order", displayMode: .inline)
+
     }
 }
 

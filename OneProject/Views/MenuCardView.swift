@@ -10,11 +10,10 @@ import SwiftUI
 struct MenuCardView: View {
     
     @State var selectedTab = Tabs.FirstTab
-    @State var event: Event
+     var event: Event
 
 
     var body: some View {
-        NavigationView {
             VStack {
                 HStack {
                     Spacer()
@@ -47,7 +46,7 @@ struct MenuCardView: View {
                     Spacer()
                 }
                 .padding(.bottom)
-                .background(Color.green.edgesIgnoringSafeArea(.all))
+                .background(Color.secondary.edgesIgnoringSafeArea(.all))
                 
                 Spacer()
                 
@@ -60,21 +59,9 @@ struct MenuCardView: View {
                 }
                 Spacer()
             }
-            .padding(.bottom)
-            .background(Color.secondary.edgesIgnoringSafeArea(.all))
-            
-            Spacer()
-            
-            if selectedTab == .FirstTab {
-                FirstTabView(event:event)
-            } else if selectedTab == .SecondTab {
-                SecondTabView(event:event)
-            } else {
-                ThirdTabView(event:event)
-
-            }
+            .navigationBarTitle("Choose Menu", displayMode: .inline)
+ 
         }
-    }
 }
 
 //Beverage
@@ -90,12 +77,11 @@ struct FirstTabView : View {
                         
                         if i+1 < event.drinks.count  {
                         ImageDrinksMenu(event: event, i:i+1)
-                            ImageMenu(event: event, i:i+1)
                         }
                     }
                 }
             }
-        } .navigationBarBackButtonHidden(true)
+        }
         Spacer()
     }
 }
@@ -116,7 +102,7 @@ struct SecondTabView : View {
                      }
                    }
                 }
-             } .navigationBarBackButtonHidden(true)
+             }
                 Spacer()
     }
 }
@@ -136,7 +122,7 @@ struct ThirdTabView : View {
                  }
                }
             }
-         } .navigationBarBackButtonHidden(true)
+         }
             Spacer()
         }
 }
