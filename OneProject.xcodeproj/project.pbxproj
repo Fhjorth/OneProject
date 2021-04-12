@@ -29,6 +29,7 @@
 		C4A402A8261DED8B00BAD14F /* CultureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A402A7261DED8A00BAD14F /* CultureEvent.swift */; };
 		C4A402AB261DF0B600BAD14F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A402AA261DF0B600BAD14F /* Menu.swift */; };
 		C4A402AE261F423000BAD14F /* MenuCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A402AD261F422F00BAD14F /* MenuCardView.swift */; };
+		C4A402BD2623858700BAD14F /* SizeAndQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A402BC2623858700BAD14F /* SizeAndQuantityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		C4A402A7261DED8A00BAD14F /* CultureEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureEvent.swift; sourceTree = "<group>"; };
 		C4A402AA261DF0B600BAD14F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		C4A402AD261F422F00BAD14F /* MenuCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCardView.swift; sourceTree = "<group>"; };
+		C4A402BC2623858700BAD14F /* SizeAndQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeAndQuantityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				2FD7E45B261A71FC00EAC778 /* SignUpView.swift */,
 				2FD7E46A261B7A2F00EAC778 /* MainView.swift */,
 				C4A402AD261F422F00BAD14F /* MenuCardView.swift */,
+				C4A402BC2623858700BAD14F /* SizeAndQuantityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */,
 				2FD7E46B261B7A2F00EAC778 /* MainView.swift in Sources */,
+				C4A402BD2623858700BAD14F /* SizeAndQuantityView.swift in Sources */,
 				2FA4FC872619ECC500F343B9 /* User.swift in Sources */,
 				C4A402A8261DED8B00BAD14F /* CultureEvent.swift in Sources */,
 				2FA4FC5E26191A7E00F343B9 /* ContentView.swift in Sources */,

@@ -14,7 +14,6 @@ struct MainView: View {
 
 
     var body: some View {
-        NavigationView {
         VStack{
             Group {
                 Divider()
@@ -76,16 +75,16 @@ struct MainView: View {
         }        .navigationBarBackButtonHidden(true)
 
        }
-    }
+    
 }
 
 
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView(stadium: Events)
-//
-//    }
-//}
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+
+    }
+}
 
 
 
