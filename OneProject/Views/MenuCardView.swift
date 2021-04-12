@@ -12,35 +12,51 @@ struct MenuCardView: View {
     @State var selectedTab = Tabs.FirstTab
     @State var event: Event
 
+
     var body: some View {
-        VStack {
-            HStack {
+        NavigationView {
+            VStack {
+                HStack {
+                    Spacer()
+                    VStack {
+                        Image(systemName: "airplane")
+                            .foregroundColor(selectedTab == .FirstTab ? Color.red : Color.black)
+                        Text("Beverage")
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .FirstTab
+                    }
+                    Spacer()
+                    VStack {
+                        Image(systemName: "person.fill")
+                            .foregroundColor(selectedTab == .SecondTab ? Color.red : Color.black)
+                        Text("Food")
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .SecondTab
+                    }
+                    Spacer()
+                    VStack {
+                        Image(systemName: "cart.fill")
+                            .foregroundColor(selectedTab == .ThirdTab ? Color.red : Color.black)
+                        Text("Alcohol")
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .ThirdTab
+                    }
+                    Spacer()
+                }
+                .padding(.bottom)
+                .background(Color.green.edgesIgnoringSafeArea(.all))
+                
                 Spacer()
-                VStack {
-                    Image(systemName: "airplane")
-                    .foregroundColor(selectedTab == .FirstTab ? Color.red : Color.black)
-                    Text("Beverage")
-                }
-                .onTapGesture {
-                    self.selectedTab = .FirstTab
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "person.fill")
-                        .foregroundColor(selectedTab == .SecondTab ? Color.red : Color.black)
-                    Text("Food")
-                }
-                .onTapGesture {
-                    self.selectedTab = .SecondTab
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "cart.fill")
-                        .foregroundColor(selectedTab == .ThirdTab ? Color.red : Color.black)
-                    Text("Alcohol")
-                }
-                .onTapGesture {
-                    self.selectedTab = .ThirdTab
+                
+                if selectedTab == .FirstTab {
+                    FirstTabView(event:event)
+                } else if selectedTab == .SecondTab {
+                    SecondTabView(event:event)
+                } else {
+                    ThirdTabView(event:event)
                 }
                 Spacer()
             }
@@ -55,6 +71,7 @@ struct MenuCardView: View {
                 SecondTabView(event:event)
             } else {
                 ThirdTabView(event:event)
+
             }
         }
     }
@@ -73,14 +90,15 @@ struct FirstTabView : View {
                         
                         if i+1 < event.drinks.count  {
                         ImageDrinksMenu(event: event, i:i+1)
+                            ImageMenu(event: event, i:i+1)
+                        }
                     }
-                 }
-               }
+                }
             }
-         } .navigationBarBackButtonHidden(true)
-            Spacer()
-        }
+        } .navigationBarBackButtonHidden(true)
+        Spacer()
     }
+}
 
 
 //food

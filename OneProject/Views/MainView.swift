@@ -11,8 +11,8 @@ struct MainView: View {
     @StateObject var stadium = Events()
     @StateObject var model = Events()
     var message = "Hello from ContentView"
-
-
+    
+    
     var body: some View {
         VStack{
             Group {
@@ -22,11 +22,11 @@ struct MainView: View {
                     HStack(spacing:10){
                         ForEach(model.stadium){
                             event in
-                                NavigationLink(
-                                    destination: MenuCardView(event: event)
-                                   ) {
-                            ProductCard(image: event.image,
-                                title: event.title, type: event.type, price: event.price)
+                            NavigationLink(
+                                destination: MenuCardView(event: event)
+                            ) {
+                                ProductCard(image: event.image,
+                                            title: event.title, type: event.type, price: event.price)
                             }
                         }
                     }.padding()
@@ -34,7 +34,7 @@ struct MainView: View {
                 Divider()
                 Spacer()
             }
-
+            
             Group {
                 Divider()
                 Text("Concert").fontWeight(.bold).font(.title)
@@ -44,11 +44,11 @@ struct MainView: View {
                             event in
                             NavigationLink(
                                 destination: MenuCardView(event: event)
-                               ) {
-                            ProductCard(image:event.image,
-                                title:event.title, type:event.type, price:event.price)
+                            ) {
+                                ProductCard(image:event.image,
+                                            title:event.title, type:event.type, price:event.price)
+                            }
                         }
-                    }
                     }.padding()
                 }.frame(height:100)
                 Divider()
@@ -63,9 +63,9 @@ struct MainView: View {
                             event in
                             NavigationLink(
                                 destination: MenuCardView(event: event)
-                               ) {
-                            ProductCard(image:event.image,
-                                title:event.title, type:event.type, price:event.price)
+                            ) {
+                                ProductCard(image:event.image,
+                                            title:event.title, type:event.type, price:event.price)
                             }
                         }
                     }.padding()
@@ -76,6 +76,7 @@ struct MainView: View {
 
        }
     
+
 }
 
 
@@ -109,8 +110,8 @@ struct ProductCard: View {
                     .font(.system(size: 26, weight: .bold, design: .default))
                     .foregroundColor(.white)
                 Text(type)
-                                 .font(.system(size: 16, weight: .bold, design: .default))
-                                 .foregroundColor(.gray)
+                    .font(.system(size: 16, weight: .bold, design: .default))
+                    .foregroundColor(.gray)
                 HStack {
                     Text("$" + String.init(format: "%0.2f", price))
                         .font(.system(size: 16, weight: .bold, design: .default))
@@ -124,7 +125,7 @@ struct ProductCard: View {
         .background(Color(red: 32/255, green: 36/255, blue: 38/255))
         .modifier(CardModifier())
         .padding(.all, 10)
-    
+        
     }
 }
 
