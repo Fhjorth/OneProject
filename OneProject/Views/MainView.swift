@@ -16,7 +16,6 @@ struct MainView: View {
     var body: some View {
         VStack{
             Group {
-                Divider()
                 Text("Stadium").fontWeight(.bold).font(.title)
                 ScrollView(.horizontal){
                     HStack(spacing:10){
@@ -32,11 +31,9 @@ struct MainView: View {
                     }.padding()
                 }.frame(height:100)
                 Divider()
-                Spacer()
             }
             
             Group {
-                Divider()
                 Text("Concert").fontWeight(.bold).font(.title)
                 ScrollView(.horizontal){
                     HStack(spacing:10){
@@ -52,10 +49,8 @@ struct MainView: View {
                     }.padding()
                 }.frame(height:100)
                 Divider()
-                Spacer()
             }
             Group {
-                Divider()
                 Text("Cinema").fontWeight(.bold).font(.title)
                 ScrollView(.horizontal){
                     HStack(spacing:10){
@@ -72,6 +67,7 @@ struct MainView: View {
                 }.frame(height:100)
                 Divider()
             }
+            Spacer()
         }        .navigationBarBackButtonHidden(true)
         .padding(.horizontal, 32)
         .navigationBarTitle("Choose Event", displayMode: .inline)
