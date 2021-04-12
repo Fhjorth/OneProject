@@ -10,8 +10,9 @@ import SwiftUI
 struct MenuCardView: View {
     
     @State var selectedTab = Tabs.FirstTab
-    var event: Event
-    
+    @State var event: Event
+
+
     var body: some View {
         NavigationView {
             VStack {
@@ -57,6 +58,20 @@ struct MenuCardView: View {
                 } else {
                     ThirdTabView(event:event)
                 }
+                Spacer()
+            }
+            .padding(.bottom)
+            .background(Color.secondary.edgesIgnoringSafeArea(.all))
+            
+            Spacer()
+            
+            if selectedTab == .FirstTab {
+                FirstTabView(event:event)
+            } else if selectedTab == .SecondTab {
+                SecondTabView(event:event)
+            } else {
+                ThirdTabView(event:event)
+
             }
         }
     }
@@ -69,9 +84,12 @@ struct FirstTabView : View {
         VStack {
             ForEach(0..<event.drinks.count) { i in
                 if i % 2 == 0  {
-                    HStack {
-                        ImageMenu(event: event, i: i)
+                    //HStack() {
+                    HStack(spacing: 0) {
+                        ImageDrinksMenu(event: event, i: i)
+                        
                         if i+1 < event.drinks.count  {
+                        ImageDrinksMenu(event: event, i:i+1)
                             ImageMenu(event: event, i:i+1)
                         }
                     }
@@ -86,25 +104,41 @@ struct FirstTabView : View {
 //food
 struct SecondTabView : View {
     var event: Event
-    
-    var body : some View {
-        Text("SECOND TAB VIEW")
-        Text("\(event.title)")
-        Text("\(event.mad[0])")
-        Text("\(event.mad[1])")
-        
+        var body : some View {
+            VStack {
+                ForEach(0..<event.mad.count) { i in
+                    if i % 2 == 0  {
+                        HStack {
+                            ImageFoodMenu(event: event, i: i)
+                            if i+1 < event.mad.count  {
+                                ImageFoodMenu(event: event, i:i+1)
+                        }
+                     }
+                   }
+                }
+             } .navigationBarBackButtonHidden(true)
+                Spacer()
     }
 }
 
 //Alcohol
 struct ThirdTabView : View {
     var event: Event
-    
     var body : some View {
-        Text("THIRD TAB VIEW")
-        Text("\(event.title)")
-        
-    }
+        VStack {
+            ForEach(0..<event.snacks.count) { i in
+                if i % 2 == 0  {
+                    HStack {
+                        ImageSnackMenu(event: event, i: i )
+                        if i+1 < event.snacks.count  {
+                        ImageSnackMenu(event: event, i:i+1)
+                    }
+                 }
+               }
+            }
+         } .navigationBarBackButtonHidden(true)
+            Spacer()
+        }
 }
 
 enum Tabs {
@@ -117,16 +151,21 @@ enum Tabs {
 
 //struct MenuCardView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        MenuCardView(item: CultureEvent.Event)
+//        var event: Event
+//
+//        MenuCardView(event: event)
 //    }
 //}
 
 
 
-struct ImageMenu: View {
+struct ImageDrinksMenu: View {
     var event: Event
     var i: Int
     var body: some View {
+        NavigationLink(
+            destination: SizeAndQuantityView(event: event)
+           ) {
         VStack {
             Image(event.drinks[i].image)
                 .resizable()
@@ -136,5 +175,42 @@ struct ImageMenu: View {
             Text("\(event.drinks[i].title)")
             Text("\(event.drinks[i].price)")
         }
+        }
     }
 }
+
+
+struct ImageFoodMenu: View {
+    var event: Event
+    var i: Int
+    var body: some View {
+        VStack {
+            Image(event.mad[i].image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100)
+                .padding(.all, 20)
+            Text("\(event.mad[i].title)")
+            Text("\(event.mad[i].price)")
+        }
+    }
+}
+
+
+struct ImageSnackMenu: View {
+    var event: Event
+    var i: Int
+    var body: some View {
+        VStack {
+            Image(event.snacks[i].image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100)
+                .padding(.all, 20)
+            Text("\(event.snacks[i].title)")
+            Text("\(event.snacks[i].price)")
+            
+        }
+    }
+}
+

@@ -73,17 +73,19 @@ struct MainView: View {
                 Divider()
             }
         }        .navigationBarBackButtonHidden(true)
-        
-    }
+
+       }
+    
+
 }
 
 
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView(stadium: Events)
-//
-//    }
-//}
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+
+    }
+}
 
 
 
