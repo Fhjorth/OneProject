@@ -14,54 +14,72 @@ struct MainView: View {
     var body: some View {
         VStack{
             ScrollView(.vertical) {
-                Group {
-                    Text("Stadium").fontWeight(.bold).font(.title)
-                    ScrollView(.horizontal){
-                        HStack(spacing:10){
-                            ForEach(model.stadium){
-                                event in
-                                NavigationLink(
-                                    destination: MenuCardView(event: event)
-                                ) {
-                                    ProductCard(image: event.image,
-                                                title: event.title, type: event.type, price: event.price)
+                VStack(alignment: .leading) {
+                    Group {
+                        Text("Stadium")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .foregroundColor(.newPrimary)
+                            .padding(.leading, 20)
+                        ScrollView(.horizontal){
+                            HStack(spacing:10){
+                                ForEach(model.stadium){
+                                    event in
+                                    NavigationLink(
+                                        destination: MenuCardView(event: event)
+                                    ) {
+                                        ProductCard(image: event.image,
+                                                    title: event.title, type: event.type, price: event.price)
+                                    }
                                 }
-                            }
-                        }.padding(.leading)
+                            }.padding(.leading)
+                        }
                     }
                 }
                 
-                Group {
-                    Text("Concert").fontWeight(.bold).font(.title)
-                    ScrollView(.horizontal){
-                        HStack(spacing:10){
-                            ForEach(model.concert){
-                                event in
-                                NavigationLink(
-                                    destination: MenuCardView(event: event)
-                                ) {
-                                    ProductCard(image:event.image,
-                                                title:event.title, type:event.type, price:event.price)
+                VStack(alignment: .leading) {
+                    Group {
+                        Text("Concert")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .foregroundColor(.newPrimary)
+                            .padding(.leading, 20)
+                        ScrollView(.horizontal){
+                            HStack(spacing:10){
+                                ForEach(model.concert){
+                                    event in
+                                    NavigationLink(
+                                        destination: MenuCardView(event: event)
+                                    ) {
+                                        ProductCard(image:event.image,
+                                                    title:event.title, type:event.type, price:event.price)
+                                    }
                                 }
-                            }
-                        }.padding(.leading)
+                            }.padding(.leading)
+                        }
                     }
                 }
-                Group {
-                    Text("Cinema").fontWeight(.bold).font(.title)
-                    ScrollView(.horizontal){
-                        HStack(){
-                            ForEach(model.cinema){
-                                event in
-                                NavigationLink(
-                                    destination: MenuCardView(event: event)
-                                ) {
-                                    ProductCard(image:event.image,
-                                                title:event.title, type:event.type, price:event.price)
+                VStack(alignment: .leading) {
+                    Group {
+                        Text("Cinema")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .foregroundColor(.newPrimary)
+                            .padding(.leading, 20)
+                        ScrollView(.horizontal){
+                            HStack(){
+                                ForEach(model.cinema){
+                                    event in
+                                    NavigationLink(
+                                        destination: MenuCardView(event: event)
+                                    ) {
+                                        ProductCard(image:event.image,
+                                                    title:event.title, type:event.type, price:event.price)
+                                    }
                                 }
                             }
+                            .padding(.leading)
                         }
-                        .padding(.leading)
                     }
                 }
                 Spacer()
