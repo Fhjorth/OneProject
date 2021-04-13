@@ -16,6 +16,7 @@ struct navbarView: View {
     var body: some View {
         TabView {
             MainView()
+                .navigationBarTitle("Choose Event", displayMode: .large)
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Event")
@@ -31,10 +32,7 @@ struct navbarView: View {
                     Text("Account")
                 }
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("Choose Event", displayMode: .large)
-        .accentColor(.newPrimary)
-        
+        .navigationBarBackButtonHidden(true)        .accentColor(.newPrimary)
     }
 }
 

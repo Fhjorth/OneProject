@@ -46,7 +46,7 @@ struct MenuCardView: View {
                     Spacer()
                 }
                 .padding(.bottom)
-                .background(Color.secondary.edgesIgnoringSafeArea(.all))
+                .background(Color.newSecondary.edgesIgnoringSafeArea(.all))
                 
                 Spacer()
                 

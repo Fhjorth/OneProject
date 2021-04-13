@@ -9,80 +9,76 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var stadium = Events()
-    @StateObject var model = Events()
-    var message = "Hello from ContentView"
-    
+    @StateObject var model = Events()    
     
     var body: some View {
         VStack{
-            Group {
-                Text("Stadium").fontWeight(.bold).font(.title)
-                ScrollView(.horizontal){
-                    HStack(spacing:10){
-                        ForEach(model.stadium){
-                            event in
-                            NavigationLink(
-                                destination: MenuCardView(event: event)
-                            ) {
-                                ProductCard(image: event.image,
-                                            title: event.title, type: event.type, price: event.price)
+            ScrollView(.vertical) {
+                Group {
+                    Text("Stadium").fontWeight(.bold).font(.title)
+                    ScrollView(.horizontal){
+                        HStack(spacing:10){
+                            ForEach(model.stadium){
+                                event in
+                                NavigationLink(
+                                    destination: MenuCardView(event: event)
+                                ) {
+                                    ProductCard(image: event.image,
+                                                title: event.title, type: event.type, price: event.price)
+                                }
+                            }
+                        }.padding(.leading)
+                    }
+                }
+                
+                Group {
+                    Text("Concert").fontWeight(.bold).font(.title)
+                    ScrollView(.horizontal){
+                        HStack(spacing:10){
+                            ForEach(model.concert){
+                                event in
+                                NavigationLink(
+                                    destination: MenuCardView(event: event)
+                                ) {
+                                    ProductCard(image:event.image,
+                                                title:event.title, type:event.type, price:event.price)
+                                }
+                            }
+                        }.padding(.leading)
+                    }
+                }
+                Group {
+                    Text("Cinema").fontWeight(.bold).font(.title)
+                    ScrollView(.horizontal){
+                        HStack(){
+                            ForEach(model.cinema){
+                                event in
+                                NavigationLink(
+                                    destination: MenuCardView(event: event)
+                                ) {
+                                    ProductCard(image:event.image,
+                                                title:event.title, type:event.type, price:event.price)
+                                }
                             }
                         }
-                    }.padding()
-                }.frame(height:100)
-                Divider()
+                        .padding(.leading)
+                    }
+                }
+                Spacer()
             }
             
-            Group {
-                Text("Concert").fontWeight(.bold).font(.title)
-                ScrollView(.horizontal){
-                    HStack(spacing:10){
-                        ForEach(model.concert){
-                            event in
-                            NavigationLink(
-                                destination: MenuCardView(event: event)
-                            ) {
-                                ProductCard(image:event.image,
-                                            title:event.title, type:event.type, price:event.price)
-                            }
-                        }
-                    }.padding()
-                }.frame(height:100)
-                Divider()
-            }
-            Group {
-                Text("Cinema").fontWeight(.bold).font(.title)
-                ScrollView(.horizontal){
-                    HStack(spacing:10){
-                        ForEach(model.cinema){
-                            event in
-                            NavigationLink(
-                                destination: MenuCardView(event: event)
-                            ) {
-                                ProductCard(image:event.image,
-                                            title:event.title, type:event.type, price:event.price)
-                            }
-                        }
-                    }.padding()
-                }.frame(height:100)
-                Divider()
-            }
-            Spacer()
         }
-        .padding(.horizontal, 32)
-       }
+        .navigationBarHidden(true)
+        .navigationBarTitle("Choose Event", displayMode: .large)
+    }
 }
-
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-
+        
     }
 }
-
-
-
 
 struct ProductCard: View {
     
@@ -92,42 +88,20 @@ struct ProductCard: View {
     var price: Double
     
     var body: some View {
-        HStack(alignment: .center) {
+        ZStack(alignment: .bottomTrailing) {
             Image(image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
-                .padding(.all, 20)
-            
-            VStack(alignment: .leading) {
-                Text(title)
-                    .font(.system(size: 26, weight: .bold, design: .default))
-                    .foregroundColor(.white)
-                Text(type)
-                    .font(.system(size: 16, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                HStack {
-                    Text("$" + String.init(format: "%0.2f", price))
-                        .font(.system(size: 16, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                        .padding(.top, 8)
-                }
-            }.padding(.trailing, 20)
-            Spacer()
+                .aspectRatio(contentMode: .fill)
+                .opacity(0.7)
+                .frame(width: 150, height: 150)
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding(12)
         }
-        .frame(maxWidth: .infinity, alignment: .center)
         .background(Color(red: 32/255, green: 36/255, blue: 38/255))
-        .modifier(CardModifier())
-        .padding(.all, 10)
-        
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .frame(maxWidth: .infinity, alignment: .center)
+        .padding(.all, 3)
     }
-}
-
-struct CardModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
-    }
-    
 }
