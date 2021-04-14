@@ -33,6 +33,10 @@ class SessionStore: ObservableObject {
         Auth.auth().createUser(withEmail: email, password: password, completion: handler)
     }
     
+    func signOut() {
+        // TODO: Add sign out functionality
+    }
+    
     func unbind () {
         if let handle = handle {
             Auth.auth().removeStateDidChangeListener(handle)
