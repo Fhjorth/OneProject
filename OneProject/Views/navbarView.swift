@@ -8,31 +8,48 @@
 import SwiftUI
 
 struct navbarView: View {
+    @EnvironmentObject var session: SessionStore
+    @ObservedObject var global = ControllerRegistry.global
     
     init() {
         UITabBar.appearance().isTranslucent = false
     }
     
-    var body: some View {
-        TabView {
-            MainView()
-                .navigationBarTitle("Choose Event", displayMode: .large)
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Event")
-                }
-            Text("The content of the second view")
-                .tabItem {
-                    Image(systemName: "cart.fill")
-                    Text("Order")
-                }
-            Text("The content of the third view")
-                .tabItem {
-                    Image(systemName: "person.circle.fill")
-                    Text("Account")
-                }
+    func getUser() {
+        self.global.updateUserId(userId: UserDefaults.standard.string(forKey: "userId"))
+        
+        if self.global.userId != nil {
+            self.session
         }
-        .navigationBarBackButtonHidden(true)        .accentColor(.newPrimary)
+    }
+    
+    var body: some View {
+        ZStack {
+            Group{
+                TabView {
+                        MainView().navigationBarTitle("Choose Event", displayMode: .large)
+                        .tabItem {
+                            Image(systemName: "house.fill")
+                            Text("Event")
+                        }.tag(0)
+                    
+                    NavigationView {
+                        Text("The content of the second view")}
+                        .tabItem {
+                            Image(systemName: "cart.fill")
+                            Text("Order")
+                        }.tag(1)
+                    
+                    Text("The content of the third view")
+                        .tabItem {
+                            Image(systemName: "person.circle.fill")
+                            Text("Account")
+                        }
+                }
+                .navigationBarBackButtonHidden(true)
+                .accentColor(.newPrimary)
+            }
+        }
     }
 }
 

@@ -20,6 +20,4 @@ struct Menu {
 //    private var icon: String
 //    private var size: String
 //    private var allergies: String
-//
-    
 }

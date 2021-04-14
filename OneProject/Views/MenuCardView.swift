@@ -46,9 +46,9 @@ struct MenuCardView: View {
                     Spacer()
                 }
                 .padding(.bottom)
+                .padding(.top, 50)
                 .background(Color.newSecondary.edgesIgnoringSafeArea(.all))
                 
-                Spacer()
                 
                 if selectedTab == .FirstTab {
                     FirstTabView(event:event)
@@ -57,10 +57,8 @@ struct MenuCardView: View {
                 } else {
                     ThirdTabView(event:event)
                 }
-                Spacer()
             }
             .navigationBarTitle("Choose Menu", displayMode: .inline)
- 
         }
 }
 
@@ -82,7 +80,8 @@ struct FirstTabView : View {
                 }
             }
         }
-        Spacer()
+        //Spacer()
+        .padding(.top, 50)
     }
 }
 
@@ -137,9 +136,7 @@ enum Tabs {
 
 //struct MenuCardView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        var event: Event
-//
-//        MenuCardView(event: event)
+//        MenuCardView(event: )
 //    }
 //}
 

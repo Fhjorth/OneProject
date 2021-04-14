@@ -9,7 +9,7 @@ import Foundation
 
 class Global: ObservableObject {
     @Published var isLoading = true
-    
+    @Published var userId : String?
     
     func updateLoadingState(isLoading: Bool) {
         DispatchQueue.main.async {
@@ -17,4 +17,8 @@ class Global: ObservableObject {
         }
     }
     
+    func updateUserId(userId : String?) {
+        self.userId = userId
+        UserDefaults.standard.set(userId, forKey: "userId")
+    }
 }
