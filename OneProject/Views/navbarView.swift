@@ -16,11 +16,7 @@ struct navbarView: View {
     }
     
     func getUser() {
-        self.global.updateUserId(userId: UserDefaults.standard.string(forKey: "userId"))
         
-        if self.global.userId != nil {
-            self.session
-        }
     }
     
     var body: some View {
@@ -33,8 +29,8 @@ struct navbarView: View {
                             Text("Event")
                         }.tag(0)
                     
-                    NavigationView {
-                        Text("The content of the second view")}
+                        Text("The content of the second view")
+                            .navigationBarTitle("Order", displayMode: .large)
                         .tabItem {
                             Image(systemName: "cart.fill")
                             Text("Order")
@@ -46,7 +42,7 @@ struct navbarView: View {
                             Text("Account")
                         }
                 }
-                .navigationBarBackButtonHidden(true)
+                //.navigationBarBackButtonHidden(true)
                 .accentColor(.newPrimary)
             }
         }
