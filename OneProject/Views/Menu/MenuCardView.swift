@@ -163,37 +163,18 @@ struct ImageDrinksMenu: View {
 }
 
 
-struct ImageFoodMenu: View {
-    var event: Event
-    var i: Int
-    var body: some View {
-        VStack {
-            Image(event.mad[i].image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
-                .padding(.all, 20)
-            Text("\(event.mad[i].title)")
-            Text("\(event.mad[i].price)")
-        }
-    }
-}
-
-
-struct ImageSnackMenu: View {
-    var event: Event
-    var i: Int
-    var body: some View {
-        VStack {
-            Image(event.snacks[i].image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
-                .padding(.all, 20)
-            Text("\(event.snacks[i].title)")
-            Text("\(event.snacks[i].price)")
-            
-        }
-    }
-}
-
+//struct ImageFoodMenu: View {
+//    var event: Event
+//    var i: Int
+//    var body: some View {
+//        VStack {
+//            Image(event.mad[i].image)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 100)
+//                .padding(.all, 20)
+//            Text("\(event.mad[i].title)")
+//            Text("\(event.mad[i].price)")
+//        }
+//    }
+//}
