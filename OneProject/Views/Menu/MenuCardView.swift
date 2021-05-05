@@ -19,7 +19,7 @@ struct MenuCardView: View {
                     Spacer()
                     VStack {
                         Image(systemName: "airplane")
-                            .foregroundColor(selectedTab == .FirstTab ? Color.red : Color.black)
+                            .foregroundColor(selectedTab == .FirstTab ? Color.newPrimary : Color.gray)
                         Text("Beverage")
                     }
                     .onTapGesture {
@@ -28,7 +28,7 @@ struct MenuCardView: View {
                     Spacer()
                     VStack {
                         Image(systemName: "person.fill")
-                            .foregroundColor(selectedTab == .SecondTab ? Color.red : Color.black)
+                            .foregroundColor(selectedTab == .SecondTab ? .newPrimary : Color.gray)
                         Text("Food")
                     }
                     .onTapGesture {
@@ -37,7 +37,8 @@ struct MenuCardView: View {
                     Spacer()
                     VStack {
                         Image(systemName: "cart.fill")
-                            .foregroundColor(selectedTab == .ThirdTab ? Color.red : Color.black)
+                            .foregroundColor(selectedTab == .ThirdTab ? Color.newPrimary
+                                                : Color.gray)
                         Text("Alcohol")
                     }
                     .onTapGesture {
@@ -46,8 +47,9 @@ struct MenuCardView: View {
                     Spacer()
                 }
                 .padding(.bottom)
-                .padding(.top, 50)
-                .background(Color.newSecondary.edgesIgnoringSafeArea(.all))
+                .padding(.top, 20)
+                .background(Color.white.edgesIgnoringSafeArea(.all))
+                Divider()
                 
                 
                 if selectedTab == .FirstTab {
@@ -81,7 +83,7 @@ struct FirstTabView : View {
             }
         }
         //Spacer()
-        .padding(.top, 50)
+        .padding(.top, 20)
     }
 }
 
