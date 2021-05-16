@@ -9,8 +9,6 @@ import SwiftUI
 
 struct SizeAndQuantityView: View {
     var event: Event
-   // var title: String
-  //  var description: String
     @State private var selected = 1
     @State private var value = 0
 
@@ -62,7 +60,6 @@ struct SizeAndQuantityView: View {
 
 struct SizeAndQuantityView_Previews: PreviewProvider {
     static var previews: some View {
-      //  var event: Event
 
         SizeAndQuantityView(event: Event(aid: "DAS54EASDE", title: "Brøndby Stadium", image: "BIF", type:"Stadium",price: 50.99,
                                   mad: [

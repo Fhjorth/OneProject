@@ -42,7 +42,7 @@ struct MainView: View {
                         Text("Concert")
                             .fontWeight(.bold)
                             .font(.title)
-                            .foregroundColor(.newPrimary)
+                            .foregroundColor(.newSecondary)
                             .padding(.leading, 20)
                         ScrollView(.horizontal){
                             HStack(spacing:10){
@@ -64,7 +64,7 @@ struct MainView: View {
                         Text("Cinema")
                             .fontWeight(.bold)
                             .font(.title)
-                            .foregroundColor(.newPrimary)
+                            .foregroundColor(.newSecondary)
                             .padding(.leading, 20)
                         ScrollView(.horizontal){
                             HStack(){
