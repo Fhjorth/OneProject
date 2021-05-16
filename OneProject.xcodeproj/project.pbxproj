@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F20DFCB2642D8110025E66B /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20DFCA2642D8110025E66B /* ProfilView.swift */; };
 		2F9D150626295FAA000C0F19 /* ImageSnackMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */; };
 		2F9D150926296004000C0F19 /* ImageFoodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150826296004000C0F19 /* ImageFoodMenu.swift */; };
 		2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC5B26191A7E00F343B9 /* OneProjectApp.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F20DFCA2642D8110025E66B /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSnackMenu.swift; sourceTree = "<group>"; };
 		2F9D150826296004000C0F19 /* ImageFoodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFoodMenu.swift; sourceTree = "<group>"; };
 		2FA4FC5826191A7E00F343B9 /* OneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				2FD7E46A261B7A2F00EAC778 /* MainView.swift */,
 				C4A402BC2623858700BAD14F /* SizeAndQuantityView.swift */,
 				2FBDC0612624C755004F1A91 /* navbarView.swift */,
+				2F20DFCA2642D8110025E66B /* ProfilView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FBDC0622624C755004F1A91 /* navbarView.swift in Sources */,
+				2F20DFCB2642D8110025E66B /* ProfilView.swift in Sources */,
 				2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */,
 				2FD7E46B261B7A2F00EAC778 /* MainView.swift in Sources */,
 				C4A402BD2623858700BAD14F /* SizeAndQuantityView.swift in Sources */,

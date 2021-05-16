@@ -24,7 +24,8 @@ struct SignUpView: View {
             if let error = error {
                 self.error = error.localizedDescription
                 self.global.updateLoadingState(isLoading: false)
-                print("here 1")
+                print("here 1", error)
+                
             } else {
                 UserDefaults.standard.set(result?.user.uid, forKey: "userId")
                 
@@ -46,6 +47,9 @@ struct SignUpView: View {
                 .foregroundColor(Color("Inactive"))
             
             VStack(spacing: 18) {
+                if (error != nil) {
+                    Text(error.description).foregroundColor(.red)
+                }
                 TextField("Email", text: $email)
                     .padding(12)
                     .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black)))
@@ -56,7 +60,7 @@ struct SignUpView: View {
             .padding(.vertical, 64)
             
             NavigationLink(
-                destination: MainView(),
+                destination: navbarView(),
                 isActive: $isShowing) {
                 EmptyView()
             }

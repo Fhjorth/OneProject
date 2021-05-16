@@ -25,22 +25,22 @@ struct LoginView: View {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.newPrimary)]
     }
     
-    func getUser() {
-        session.list()
-    }
-    
     func logIn() {
         self.global.updateLoadingState(isLoading: true)
         error = false
         
         session.signIn(email: email, password: password) { (result, error) in
+            self.global.updateLoadingState(isLoading: false)
             if error != nil {
                 self.error = true
-                self.global.updateLoadingState(isLoading: false)
+                print("There was and error: ", error)
             } else {
+                self.global.updateUserId(userId: result?.user.uid)
                 self.email = ""
                 self.password = ""
-                isShowing = true
+                self.isShowing.toggle()
+                print("isShowing:", isShowing)
+                print("Updated user: ", result?.user.uid )
             }
         }
     }
@@ -62,18 +62,20 @@ struct LoginView: View {
                     .font(.system(size: 14))
                     .padding(12)
                     .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
-                NavigationLink(
-                    destination: navbarView(),
-                    isActive: $isShowing) {
-                    EmptyView()
-                }
             }
             .padding(.vertical, 64)
             
-            Button("Login") {
-                logIn()
+            NavigationLink(
+                destination: navbarView(),
+                isActive: $isShowing
+            ) {
+                Button(action: {
+                    logIn()
+                }, label: {
+                    Text("Login")
+                })
+                .buttonStyle(CustomButtton())
             }
-            .buttonStyle(CustomButtton())
         }
         .padding(.horizontal, 32)
         .navigationBarTitle("Sign In", displayMode: .inline)

@@ -10,7 +10,6 @@ import Firebase
 
 @main
 struct OneProjectApp: App {
-    
     @StateObject private var session = SessionStore()
     
     init() {
@@ -19,7 +18,7 @@ struct OneProjectApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(session)
+            navbarView().environmentObject(session)
         }
     }
 }

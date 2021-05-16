@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-
-
-
-
-
 struct SizeAndQuantityView: View {
     var event: Event
    // var title: String

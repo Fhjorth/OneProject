@@ -9,10 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selection: Int? = nil
-    @EnvironmentObject var session: SessionStore
     
     var body: some View {
-        NavigationView {
             VStack {
                 Text("Click & Enjoy")
                     .font(.title)
@@ -36,12 +34,12 @@ struct ContentView: View {
                 }
                 .padding(.horizontal, 32)
             }
-        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(SessionStore())
+        ContentView()
     }
 }

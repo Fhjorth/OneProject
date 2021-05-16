@@ -19,7 +19,7 @@ struct MainView: View {
                         Text("Stadium")
                             .fontWeight(.bold)
                             .font(.title)
-                            .foregroundColor(.newPrimary)
+                            .foregroundColor(.newSecondary)
                             .padding(.leading, 20)
                         ScrollView(.horizontal){
                             HStack(spacing:10){
@@ -86,8 +86,6 @@ struct MainView: View {
             }
             
         }
-        .navigationBarHidden(true)
-        .navigationBarTitle("Choose Event", displayMode: .large)
     }
 }
 
