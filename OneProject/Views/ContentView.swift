@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var selection: Int? = nil
     
     var body: some View {
+        NavigationView {
             VStack {
                 Text("Click & Enjoy")
                     .font(.title)
@@ -20,8 +21,8 @@ struct ContentView: View {
                     destination: LoginView(),
                     tag: 1,
                     selection: $selection){
-                Button("Login") { self.selection = 1 }
-                    .buttonStyle(CustomButtton())
+                    Button("Login") { self.selection = 1 }
+                        .buttonStyle(CustomButtton())
                 }
                 .padding(.horizontal, 32)
                 
@@ -29,12 +30,13 @@ struct ContentView: View {
                     destination: SignUpView(),
                     tag: 2,
                     selection: $selection){
-                Button("Sign Up") { self.selection = 2 }
-                    .buttonStyle(CustomButtton())
+                    Button("Sign Up") { self.selection = 2 }
+                        .buttonStyle(CustomButtton())
                 }
                 .padding(.horizontal, 32)
             }
-        .navigationViewStyle(StackNavigationViewStyle())
+            .navigationViewStyle(StackNavigationViewStyle())
+        }
     }
 }
 

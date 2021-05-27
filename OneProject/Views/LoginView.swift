@@ -46,40 +46,42 @@ struct LoginView: View {
     }
     
     var body: some View {
-        VStack() {
-            Text("Welcome Back!")
-                .font(.system(size: 32, weight: .heavy))
-            Text("Sign in to continue")
-                .font(.system(size: 18, weight: .medium))
-                .foregroundColor(Color("Inactive"))
-            
-            VStack(spacing: 18) {
-                TextField("Email", text: $email)
-                    .font(.system(size: 14))
-                    .padding(12)
-                    .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
-                SecureField("Password", text: $password)
-                    .font(.system(size: 14))
-                    .padding(12)
-                    .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
+     
+            VStack() {
+                Text("Welcome Back!")
+                    .font(.system(size: 32, weight: .heavy))
+                Text("Sign in to continue")
+                    .font(.system(size: 18, weight: .medium))
+                    .foregroundColor(Color("Inactive"))
+                
+                VStack(spacing: 18) {
+                    TextField("Email", text: $email)
+                        .font(.system(size: 14))
+                        .padding(12)
+                        .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
+                    SecureField("Password", text: $password)
+                        .font(.system(size: 14))
+                        .padding(12)
+                        .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
+                }
+                .padding(.vertical, 64)
+                
+                NavigationLink(
+                    destination: navbarView(),
+                    isActive: $isShowing
+                ) {
+                    Button(action: {
+                        logIn()
+                    }, label: {
+                        Text("Login")
+                    })
+                    .buttonStyle(CustomButtton())
+                }
             }
-            .padding(.vertical, 64)
-            
-            NavigationLink(
-                destination: navbarView(),
-                isActive: $isShowing
-            ) {
-                Button(action: {
-                    logIn()
-                }, label: {
-                    Text("Login")
-                })
-                .buttonStyle(CustomButtton())
-            }
+            .padding(.horizontal, 32)
+            .navigationBarTitle("Sign In", displayMode: .inline)
         }
-        .padding(.horizontal, 32)
-        .navigationBarTitle("Sign In", displayMode: .inline)
-    }
+    
 }
 
 struct LoginView_Previews: PreviewProvider {
