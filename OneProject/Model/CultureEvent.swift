@@ -19,11 +19,7 @@ struct Event: Identifiable {
      var mad: [Menu]
      var drinks: [Menu]
      var snacks: [Menu]
-
-
 }
-
-
 
 class Events: ObservableObject{
     @Published var stadium: [Event]
