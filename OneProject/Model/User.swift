@@ -7,14 +7,15 @@
 
 import Foundation
 
-struct User {
-    private var uid: String
-    private var email: String
-    private var displayName: String
+struct User: Identifiable {
     
-    init(uid: String, email: String, displayName: String) {
-        self.uid = uid
-        self.email = email
-        self.displayName = displayName
-    }
+    var id: String = UUID().uuidString
+    var email: String
+    var displayName: String
+    
+//    init(id: String, email: String, displayName: String) {
+//        self.id = id
+//        self.email = email
+//        self.displayName = displayName
+//    }
 }

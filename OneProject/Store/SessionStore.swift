@@ -21,7 +21,7 @@ class SessionStore: ObservableObject {
             if let user = user {
                 //If we have a user, create new user model
                 print("got user: \(user)")
-                self.session = User(uid: user.uid, email: user.email!, displayName: user.displayName!)
+                self.session = User(id: user.uid, email: user.email!, displayName: user.displayName!)
             } else {
                 // if we dont have a user, set session to nil
                 self.session = nil

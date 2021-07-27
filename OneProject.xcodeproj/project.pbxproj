@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F20DFCB2642D8110025E66B /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20DFCA2642D8110025E66B /* ProfilView.swift */; };
+		2F3FCDCF26A9A99F00D72000 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FCDCE26A9A99F00D72000 /* UserViewModel.swift */; };
 		2F9D150626295FAA000C0F19 /* ImageSnackMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */; };
 		2F9D150926296004000C0F19 /* ImageFoodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150826296004000C0F19 /* ImageFoodMenu.swift */; };
 		2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC5B26191A7E00F343B9 /* OneProjectApp.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		2F20DFCA2642D8110025E66B /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		2F3FCDCE26A9A99F00D72000 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSnackMenu.swift; sourceTree = "<group>"; };
 		2F9D150826296004000C0F19 /* ImageFoodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFoodMenu.swift; sourceTree = "<group>"; };
 		2FA4FC5826191A7E00F343B9 /* OneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				2FD7E461261B67BB00EAC778 /* Store */,
-				2FA4FC8026191FBB00F343B9 /* Controller */,
+				2FA4FC8026191FBB00F343B9 /* ViewModel */,
 				2FA4FC7E26191FB500F343B9 /* Model */,
 				2FA4FC7B26191FAA00F343B9 /* Views */,
 				2FA4FC5B26191A7E00F343B9 /* OneProjectApp.swift */,
@@ -158,11 +160,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2FA4FC8026191FBB00F343B9 /* Controller */ = {
+		2FA4FC8026191FBB00F343B9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2F3FCDCE26A9A99F00D72000 /* UserViewModel.swift */,
 			);
-			path = Controller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2FD7E453261A65AA00EAC778 /* CustomViews */ = {
@@ -274,6 +277,7 @@
 				2FD7E45C261A71FC00EAC778 /* SignUpView.swift in Sources */,
 				2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */,
 				C4A402AE261F423000BAD14F /* MenuCardView.swift in Sources */,
+				2F3FCDCF26A9A99F00D72000 /* UserViewModel.swift in Sources */,
 				2FA4FC84261922FA00F343B9 /* Color.swift in Sources */,
 				2FD7E463261B67CA00EAC778 /* SessionStore.swift in Sources */,
 				C4A402AB261DF0B600BAD14F /* Menu.swift in Sources */,
