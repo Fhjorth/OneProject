@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct Event: Identifiable {
+struct Event: Identifiable{
      var id = UUID()
      var aid: String
      var title: String

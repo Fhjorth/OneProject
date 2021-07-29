@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+
 struct MainView: View {
-    @StateObject var stadium = Events()
-    @StateObject var model = Events()    
-    
+    @StateObject var model = Events()
+
+   
+   
     var body: some View {
         VStack{
             ScrollView(.vertical) {
@@ -26,11 +28,18 @@ struct MainView: View {
                                 ForEach(model.stadium){
                                     event in
                                     NavigationLink(
-                                        destination: MenuCardView(event: event)
-                                    ) {
+                                        destination: MenuCardView(event: event)) {
                                         ProductCard(image: event.image,
                                                     title: event.title, type: event.type, price: event.price)
                                     }
+//                                ForEach(0..<model.stadium.count){
+//                                    index in
+//                                    NavigationLink(
+//                                        destination: MenuCardView(event: model.stadium[index])
+//                                    ) {
+//                                        ProductCard(image: model.stadium[index].image,
+//                                                    title: model.stadium[index].title, type: model.stadium[index].type, price: model.stadium[index].price)
+//                                    }
                                 }
                             }.padding(.leading)
                         }
@@ -48,9 +57,7 @@ struct MainView: View {
                             HStack(spacing:10){
                                 ForEach(model.concert){
                                     event in
-                                    NavigationLink(
-                                        destination: MenuCardView(event: event)
-                                    ) {
+                                    NavigationLink( destination: MenuCardView(event: event)) {
                                         ProductCard(image:event.image,
                                                     title:event.title, type:event.type, price:event.price)
                                     }
@@ -70,9 +77,7 @@ struct MainView: View {
                             HStack(){
                                 ForEach(model.cinema){
                                     event in
-                                    NavigationLink(
-                                        destination: MenuCardView(event: event)
-                                    ) {
+                                        NavigationLink( destination: MenuCardView(event: event)) {
                                         ProductCard(image:event.image,
                                                     title:event.title, type:event.type, price:event.price)
                                     }

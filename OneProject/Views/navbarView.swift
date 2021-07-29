@@ -10,7 +10,7 @@ import SwiftUI
 struct navbarView: View {
     @EnvironmentObject var session: SessionStore
     @ObservedObject var global = ControllerRegistry.global
-    
+
     init() {
         UITabBar.appearance().isTranslucent = false
     }

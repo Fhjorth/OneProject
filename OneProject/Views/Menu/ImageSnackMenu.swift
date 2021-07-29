@@ -11,6 +11,9 @@ struct ImageSnackMenu: View {
     var event: Event
     var i: Int
     var body: some View {
+        NavigationLink(
+            destination: SizeAndQuantityView(event: event.snacks[i])
+           ) {
         VStack {
             Image(event.snacks[i].image)
                 .resizable()
@@ -21,6 +24,7 @@ struct ImageSnackMenu: View {
             Text("\(event.snacks[i].price)")
             
         }
+    }
     }
 }
 

@@ -10,8 +10,8 @@ import SwiftUI
 struct MenuCardView: View {
     
     @State var selectedTab = Tabs.FirstTab
-     var event: Event
-
+    @State var event: Event
+    
 
     var body: some View {
             VStack {
@@ -147,7 +147,7 @@ struct ImageDrinksMenu: View {
     var i: Int
     var body: some View {
         NavigationLink(
-            destination: SizeAndQuantityView(event: event)
+            destination: SizeAndQuantityView(event: event.drinks[i])
            ) {
         VStack {
             Image(event.drinks[i].image)

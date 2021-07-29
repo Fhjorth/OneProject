@@ -67,8 +67,7 @@ struct LoginView: View {
                     isActive: $isShowing) {
                     EmptyView()
                 }
-            }
-            .padding(.vertical, 64)
+            }.padding()
             
             Button("Login") {
                 logIn()
