@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2F20DFCB2642D8110025E66B /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20DFCA2642D8110025E66B /* ProfilView.swift */; };
 		2F3FCDCF26A9A99F00D72000 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FCDCE26A9A99F00D72000 /* UserViewModel.swift */; };
+		2F57AB2526AFFD8500DA6A24 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F57AB2426AFFD8500DA6A24 /* OrderView.swift */; };
+		2F57AB2726B0202E00DA6A24 /* GridStackContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F57AB2626B0202E00DA6A24 /* GridStackContainer.swift */; };
+		2F57AB2926B0307800DA6A24 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F57AB2826B0307800DA6A24 /* Event.swift */; };
+		2F57AB2B26B1598D00DA6A24 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F57AB2A26B1598D00DA6A24 /* ProductCard.swift */; };
 		2F9D150626295FAA000C0F19 /* ImageSnackMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */; };
 		2F9D150926296004000C0F19 /* ImageFoodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150826296004000C0F19 /* ImageFoodMenu.swift */; };
 		2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC5B26191A7E00F343B9 /* OneProjectApp.swift */; };
@@ -40,6 +44,10 @@
 /* Begin PBXFileReference section */
 		2F20DFCA2642D8110025E66B /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		2F3FCDCE26A9A99F00D72000 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		2F57AB2426AFFD8500DA6A24 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		2F57AB2626B0202E00DA6A24 /* GridStackContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackContainer.swift; sourceTree = "<group>"; };
+		2F57AB2826B0307800DA6A24 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		2F57AB2A26B1598D00DA6A24 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSnackMenu.swift; sourceTree = "<group>"; };
 		2F9D150826296004000C0F19 /* ImageFoodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFoodMenu.swift; sourceTree = "<group>"; };
 		2FA4FC5826191A7E00F343B9 /* OneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +154,7 @@
 				C4A402BC2623858700BAD14F /* SizeAndQuantityView.swift */,
 				2FBDC0612624C755004F1A91 /* navbarView.swift */,
 				2F20DFCA2642D8110025E66B /* ProfilView.swift */,
+				2F57AB2426AFFD8500DA6A24 /* OrderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 				2FA4FC862619ECC500F343B9 /* User.swift */,
 				C4A402A7261DED8A00BAD14F /* CultureEvent.swift */,
 				C4A402AA261DF0B600BAD14F /* Menu.swift */,
+				2F57AB2826B0307800DA6A24 /* Event.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				2FD7E454261A65BF00EAC778 /* CustomButtton.swift */,
+				2F57AB2626B0202E00DA6A24 /* GridStackContainer.swift */,
+				2F57AB2A26B1598D00DA6A24 /* ProductCard.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -272,8 +284,10 @@
 				2F9D150926296004000C0F19 /* ImageFoodMenu.swift in Sources */,
 				2F9D150626295FAA000C0F19 /* ImageSnackMenu.swift in Sources */,
 				2FA4FC872619ECC500F343B9 /* User.swift in Sources */,
+				2F57AB2926B0307800DA6A24 /* Event.swift in Sources */,
 				C4A402A8261DED8B00BAD14F /* CultureEvent.swift in Sources */,
 				2FA4FC5E26191A7E00F343B9 /* ContentView.swift in Sources */,
+				2F57AB2726B0202E00DA6A24 /* GridStackContainer.swift in Sources */,
 				2FD7E45C261A71FC00EAC778 /* SignUpView.swift in Sources */,
 				2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */,
 				C4A402AE261F423000BAD14F /* MenuCardView.swift in Sources */,
@@ -282,8 +296,10 @@
 				2FD7E463261B67CA00EAC778 /* SessionStore.swift in Sources */,
 				C4A402AB261DF0B600BAD14F /* Menu.swift in Sources */,
 				2FD7E46E261B7E4F00EAC778 /* Global.swift in Sources */,
+				2F57AB2526AFFD8500DA6A24 /* OrderView.swift in Sources */,
 				2FD7E455261A65BF00EAC778 /* CustomButtton.swift in Sources */,
 				2FD7E471261B7EBE00EAC778 /* ControllerRegistry.swift in Sources */,
+				2F57AB2B26B1598D00DA6A24 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

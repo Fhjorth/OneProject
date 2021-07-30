@@ -62,7 +62,7 @@ struct SizeAndQuantityView_Previews: PreviewProvider {
     static var previews: some View {
 
         SizeAndQuantityView(event: Event(aid: "DAS54EASDE", title: "Brøndby Stadium", image: "BIF", type:"Stadium",price: 50.99,
-                                  mad: [
+                                  food: [
                                       Menu(aid:"KKKSAD", title:"Hotdogs",description:"This is description", price: 15, image:"hotdog" ),
                                       Menu(aid:"KKKSAD", title:"Kylling",description:"This is description", price: 15, image:"Kylling" ),
                                       Menu(aid:"KKKSAD", title:"Burger",description:"This is description", price: 15, image:"burger" ),

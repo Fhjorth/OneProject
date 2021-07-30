@@ -93,11 +93,11 @@ struct SecondTabView : View {
     var event: Event
         var body : some View {
             VStack {
-                ForEach(0..<event.mad.count) { i in
+                ForEach(0..<event.food.count) { i in
                     if i % 2 == 0  {
                         HStack {
                             ImageFoodMenu(event: event, i: i)
-                            if i+1 < event.mad.count  {
+                            if i+1 < event.food.count  {
                                 ImageFoodMenu(event: event, i:i+1)
                         }
                      }
