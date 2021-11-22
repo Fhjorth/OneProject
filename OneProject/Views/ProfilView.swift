@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfilView: View {
     
     @EnvironmentObject var session: SessionStore
+    @State var isShowingTestView = false
     
     var body: some View {
         VStack{
@@ -17,6 +18,13 @@ struct ProfilView: View {
             Text("Hello User profile")
             
             Spacer()
+            NavigationLink(destination: PlayFileView(), isActive: $isShowingTestView) {
+                Button("Test") {
+                    self.isShowingTestView = true
+                }
+                .buttonStyle(CustomButtton())
+                .padding(20)
+            }
             
             Button("Sign out") {
                 session.signOut()

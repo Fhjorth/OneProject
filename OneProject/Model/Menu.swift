@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Menu {
+struct Menu: Codable {
     public var aid: String
     public var title: String
     public var description: String
@@ -20,5 +20,13 @@ struct Menu {
         self.description = description
         self.price = price
         self.image = image
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case aid
+        case title
+        case description
+        case price
+        case image
     }
 }

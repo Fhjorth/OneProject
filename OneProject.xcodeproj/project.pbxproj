@@ -13,6 +13,7 @@
 		2F57AB2726B0202E00DA6A24 /* GridStackContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F57AB2626B0202E00DA6A24 /* GridStackContainer.swift */; };
 		2F57AB2926B0307800DA6A24 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F57AB2826B0307800DA6A24 /* Event.swift */; };
 		2F57AB2B26B1598D00DA6A24 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F57AB2A26B1598D00DA6A24 /* ProductCard.swift */; };
+		2F6E6C302739638200C3ABDB /* PlayFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6E6C2F2739638200C3ABDB /* PlayFileView.swift */; };
 		2F9D150626295FAA000C0F19 /* ImageSnackMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */; };
 		2F9D150926296004000C0F19 /* ImageFoodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150826296004000C0F19 /* ImageFoodMenu.swift */; };
 		2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC5B26191A7E00F343B9 /* OneProjectApp.swift */; };
@@ -48,6 +49,7 @@
 		2F57AB2626B0202E00DA6A24 /* GridStackContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackContainer.swift; sourceTree = "<group>"; };
 		2F57AB2826B0307800DA6A24 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		2F57AB2A26B1598D00DA6A24 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		2F6E6C2F2739638200C3ABDB /* PlayFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFileView.swift; sourceTree = "<group>"; };
 		2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSnackMenu.swift; sourceTree = "<group>"; };
 		2F9D150826296004000C0F19 /* ImageFoodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFoodMenu.swift; sourceTree = "<group>"; };
 		2FA4FC5826191A7E00F343B9 /* OneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				2FA4FC83261922FA00F343B9 /* Color.swift */,
 				2FD7E46D261B7E4F00EAC778 /* Global.swift */,
 				2FD7E470261B7EBE00EAC778 /* ControllerRegistry.swift */,
+				2F6E6C2F2739638200C3ABDB /* PlayFileView.swift */,
 			);
 			path = OneProject;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				2FD7E46B261B7A2F00EAC778 /* MainView.swift in Sources */,
 				C4A402BD2623858700BAD14F /* SizeAndQuantityView.swift in Sources */,
 				2F9D150926296004000C0F19 /* ImageFoodMenu.swift in Sources */,
+				2F6E6C302739638200C3ABDB /* PlayFileView.swift in Sources */,
 				2F9D150626295FAA000C0F19 /* ImageSnackMenu.swift in Sources */,
 				2FA4FC872619ECC500F343B9 /* User.swift in Sources */,
 				2F57AB2926B0307800DA6A24 /* Event.swift in Sources */,
