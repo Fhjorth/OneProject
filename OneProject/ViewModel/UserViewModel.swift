@@ -1,10 +1,3 @@
-//
-//  UserViewModel.swift
-//  OneProject
-//
-//  Created by Frederik Hjorth on 22/07/2021.
-//
-
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth

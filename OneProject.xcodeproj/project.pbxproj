@@ -22,12 +22,12 @@
 		2FA4FC7926191F8400F343B9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA4FC7826191F8400F343B9 /* FirebaseDatabase */; };
 		2FA4FC84261922FA00F343B9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC83261922FA00F343B9 /* Color.swift */; };
 		2FA4FC872619ECC500F343B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC862619ECC500F343B9 /* User.swift */; };
+		2FA832FB286A2FCB0063F7F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FA832FA286A2FCB0063F7F1 /* GoogleService-Info.plist */; };
 		2FBDC0622624C755004F1A91 /* navbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDC0612624C755004F1A91 /* navbarView.swift */; };
 		2FD7E455261A65BF00EAC778 /* CustomButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E454261A65BF00EAC778 /* CustomButtton.swift */; };
 		2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E458261A6C4600EAC778 /* LoginView.swift */; };
 		2FD7E45C261A71FC00EAC778 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E45B261A71FC00EAC778 /* SignUpView.swift */; };
 		2FD7E463261B67CA00EAC778 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E462261B67CA00EAC778 /* SessionStore.swift */; };
-		2FD7E467261B6D7D00EAC778 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FD7E466261B6D7D00EAC778 /* GoogleService-Info.plist */; };
 		2FD7E46B261B7A2F00EAC778 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E46A261B7A2F00EAC778 /* MainView.swift */; };
 		2FD7E46E261B7E4F00EAC778 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E46D261B7E4F00EAC778 /* Global.swift */; };
 		2FD7E471261B7EBE00EAC778 /* ControllerRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7E470261B7EBE00EAC778 /* ControllerRegistry.swift */; };
@@ -50,12 +50,12 @@
 		2FA4FC6426191A7F00F343B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA4FC83261922FA00F343B9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FA4FC862619ECC500F343B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2FA832FA286A2FCB0063F7F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FBDC0612624C755004F1A91 /* navbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navbarView.swift; sourceTree = "<group>"; };
 		2FD7E454261A65BF00EAC778 /* CustomButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtton.swift; sourceTree = "<group>"; };
 		2FD7E458261A6C4600EAC778 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FD7E45B261A71FC00EAC778 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2FD7E462261B67CA00EAC778 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
-		2FD7E466261B6D7D00EAC778 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FD7E46A261B7A2F00EAC778 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2FD7E46D261B7E4F00EAC778 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2FD7E470261B7EBE00EAC778 /* ControllerRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerRegistry.swift; sourceTree = "<group>"; };
@@ -110,6 +110,7 @@
 		2FA4FC5A26191A7E00F343B9 /* OneProject */ = {
 			isa = PBXGroup;
 			children = (
+				2FA832FA286A2FCB0063F7F1 /* GoogleService-Info.plist */,
 				2FD7E461261B67BB00EAC778 /* Store */,
 				2FA4FC8026191FBB00F343B9 /* ViewModel */,
 				2FA4FC7E26191FB500F343B9 /* Model */,
@@ -117,7 +118,6 @@
 				2FA4FC5B26191A7E00F343B9 /* OneProjectApp.swift */,
 				2FA4FC5F26191A7F00F343B9 /* Assets.xcassets */,
 				2FA4FC6426191A7F00F343B9 /* Info.plist */,
-				2FD7E466261B6D7D00EAC778 /* GoogleService-Info.plist */,
 				2FA4FC6126191A7F00F343B9 /* Preview Content */,
 				2FA4FC83261922FA00F343B9 /* Color.swift */,
 				2FD7E46D261B7E4F00EAC778 /* Global.swift */,
@@ -252,8 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA4FC6326191A7F00F343B9 /* Preview Assets.xcassets in Resources */,
-				2FD7E467261B6D7D00EAC778 /* GoogleService-Info.plist in Resources */,
 				2FA4FC6026191A7F00F343B9 /* Assets.xcassets in Resources */,
+				2FA832FB286A2FCB0063F7F1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

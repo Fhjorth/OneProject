@@ -1,10 +1,3 @@
-//
-//  CultureEvent.swift
-//  OneProject
-//
-//  Created by Mathias Hansen on 07/04/2021.
-//
-
 import Foundation
 import SwiftUI
 import Combine
