@@ -38,9 +38,9 @@ struct LoginView: View {
     
     var body: some View {
             VStack() {
-                Text("Welcome Back!")
+                Text(String.localize(key: "LoginView_Title"))
                     .font(.system(size: 32, weight: .heavy))
-                Text("Sign in to continue")
+                Text(String.localize(key: "LoginView_Subtitle"))
                     .font(.system(size: 18, weight: .medium))
                     .foregroundColor(Color("Inactive"))
                 
@@ -63,15 +63,14 @@ struct LoginView: View {
                     Button(action: {
                         logIn()
                     }, label: {
-                        Text("Login")
+                        Text(String.localize(key: "LoginView_Button_Label"))
                     })
                     .buttonStyle(CustomButtton())
                 }
             }
             .padding(.horizontal, 32)
-            .navigationBarTitle("Sign In", displayMode: .inline)
+            .navigationBarTitle(String.localize(key: "LoginView_NavigationBar_Title"), displayMode: .inline)
         }
-    
 }
 
 struct LoginView_Previews: PreviewProvider {
