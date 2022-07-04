@@ -1,10 +1,3 @@
-//
-//  navbarView.swift
-//  OneProject
-//
-//  Created by Frederik Hjorth on 12/04/2021.
-//
-
 import SwiftUI
 
 struct navbarView: View {

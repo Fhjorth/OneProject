@@ -1,10 +1,3 @@
-//
-//  ProfilView.swift
-//  OneProject
-//
-//  Created by Frederik Hjorth on 05/05/2021.
-//
-
 import SwiftUI
 
 struct ProfilView: View {

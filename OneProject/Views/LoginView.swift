@@ -12,9 +12,7 @@ struct LoginView: View {
         global = ControllerRegistry.global
     
     init() {
-        // Large navitgationBarTitle = .large
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.newPrimary)]
-        // Inline navitgationBarTitle = .inline
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.newPrimary)]
     }
     
@@ -39,7 +37,6 @@ struct LoginView: View {
     }
     
     var body: some View {
-     
             VStack() {
                 Text("Welcome Back!")
                     .font(.system(size: 32, weight: .heavy))
