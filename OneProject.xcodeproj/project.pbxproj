@@ -11,6 +11,7 @@
 		2F3FCDCF26A9A99F00D72000 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FCDCE26A9A99F00D72000 /* UserViewModel.swift */; };
 		2F5D52142873767400D16537 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D52132873767400D16537 /* Localizable.strings */; };
 		2F5D52182873770F00D16537 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D52172873770F00D16537 /* String.swift */; };
+		2F5D521B28737CE300D16537 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D521A28737CE300D16537 /* InputFieldView.swift */; };
 		2F9D150626295FAA000C0F19 /* ImageSnackMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */; };
 		2F9D150926296004000C0F19 /* ImageFoodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D150826296004000C0F19 /* ImageFoodMenu.swift */; };
 		2FA4FC5C26191A7E00F343B9 /* OneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4FC5B26191A7E00F343B9 /* OneProjectApp.swift */; };
@@ -44,6 +45,7 @@
 		2F3FCDCE26A9A99F00D72000 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2F5D52132873767400D16537 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2F5D52172873770F00D16537 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2F5D521A28737CE300D16537 /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		2F9D150526295FAA000C0F19 /* ImageSnackMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSnackMenu.swift; sourceTree = "<group>"; };
 		2F9D150826296004000C0F19 /* ImageFoodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFoodMenu.swift; sourceTree = "<group>"; };
 		2FA4FC5826191A7E00F343B9 /* OneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		2F5D521928737CCD00D16537 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2F5D521A28737CE300D16537 /* InputFieldView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		2F9D150426281346000C0F19 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		2FA4FC7B26191FAA00F343B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2F5D521928737CCD00D16537 /* Components */,
 				2F9D150426281346000C0F19 /* Menu */,
 				2FD7E453261A65AA00EAC778 /* CustomViews */,
 				2FA4FC5D26191A7E00F343B9 /* ContentView.swift */,
@@ -295,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5D521B28737CE300D16537 /* InputFieldView.swift in Sources */,
 				2FBDC0622624C755004F1A91 /* navbarView.swift in Sources */,
 				2F20DFCB2642D8110025E66B /* ProfilView.swift in Sources */,
 				2FD7E459261A6C4600EAC778 /* LoginView.swift in Sources */,

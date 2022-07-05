@@ -43,7 +43,7 @@ struct LoginView: View {
                 Text(String.localize(key: "LoginView_Subtitle"))
                     .font(.system(size: 18, weight: .medium))
                     .foregroundColor(Color("Inactive"))
-                
+
                 VStack(spacing: 18) {
                     TextField("Email", text: $email)
                         .font(.system(size: 14))
@@ -55,7 +55,7 @@ struct LoginView: View {
                         .background(RoundedRectangle(cornerRadius: 5).strokeBorder(Color(.black), lineWidth: 1))
                 }
                 .padding(.vertical, 64)
-                
+
                 NavigationLink(
                     destination: navbarView(),
                     isActive: $isShowing
